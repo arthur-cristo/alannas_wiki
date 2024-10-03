@@ -4,11 +4,16 @@
     justify-content: center;
     flex-direction: column;
     gap: 1em;
-    padding: 3em;
+    padding: 2em;
+    margin: 2em;
+}
+
+.quiz-container h1 {
+    margin-bottom: 1rem;
 }
 
 .quiz-container h2 {
-    margin-top: 1em;
+    margin-top: 1rem;
 }
 
 .secret {
