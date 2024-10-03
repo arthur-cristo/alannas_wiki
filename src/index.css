@@ -35,3 +35,12 @@ h1 {
 .bg {
   background: linear-gradient(0deg, rgba(108,26,204,1) 0%, rgba(36,36,36,1) 100%);
 }
+
+.home, .photos {
+  padding: 0;
+  margin: 0;
+}
+
+.home {
+  scroll-margin-top: 8em;
+}

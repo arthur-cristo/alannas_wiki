@@ -9,6 +9,12 @@
     width: 300px;
 }
 
+@media(max-width: 768px) {
+    .gallery {
+        width: 10em;
+    }
+}
+
 .slide-container {
     position: relative;
     grid-area: 1/1;
@@ -73,6 +79,13 @@
 @keyframes slide {
     10% { transform: translateX(120%) rotate(var(--r)); }
     0%, 100%, 20% { transform: translateX(0%) rotate(var(--r)); }
+}
+
+@media(max-width: 768px) {
+    @keyframes slide {
+        10% { transform: translateX(50%) rotate(var(--r)); }
+        0%, 100%, 20% { transform: translateX(0%) rotate(var(--r)); }
+    }
 }
 
 @keyframes z-order {

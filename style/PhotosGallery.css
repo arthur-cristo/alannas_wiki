@@ -10,3 +10,24 @@
     width: 20%;
     margin-left: 30em;
 }
+
+.text-mobile {
+    display: none;
+}
+@media(max-width: 768px) {
+    .photosCarousel {
+        flex-direction: column;
+        gap: 3em;
+        padding: 2em;
+    }
+
+    .text-mobile {
+        width: 100%;
+        margin-left: 0;
+        display: block;
+    }
+
+    .text {
+        display: none;
+    }
+}

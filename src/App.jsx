@@ -12,7 +12,7 @@ function App() {
   const photosRef = useRef(null);
 
   const scrollToSection = (sectionRef) => {
-    sectionRef.current?.scrollIntoView({ behavior: 'smooth' });
+    sectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
   return (
