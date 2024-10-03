@@ -6,6 +6,7 @@
 
 .container {
     margin: 3em 2em;
+    margin-top: 8em;
     display: flex;
     gap: 8em;
     justify-content: center;
@@ -16,14 +17,38 @@
     text-align: justify;
 }
 
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	25% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(10px);
+	}
+    75% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-10px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
 .card {
-    background: linear-gradient(0deg, rgba(108, 26, 204, 1) 0%, rgba(209, 179, 255, 1) 100%);
+    background: linear-gradient(0deg, rgba(147,39,255,1) 0%, rgba(209, 179, 255, 1) 100%);
     padding: 1.5em;
     border-radius: 2em;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1.5em;
+
+}
+
+.card:hover {
+    animation: float 3s linear infinite;
 }
 
 .card img {
@@ -66,4 +91,11 @@ td {
         width: 100%;
     }
 
+    .card {
+        width: 100%;
+    }
+
+    .card img {
+        max-width: 100%;
+    }
 }
