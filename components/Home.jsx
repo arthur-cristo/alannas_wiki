@@ -20,7 +20,7 @@ const Home = () => {
                 se tornar uma arquiteta no futuro para planejar lindas casas e prédios.
             </p>
             <div className="card">
-                <img src='img\photos\first_card.png' alt="Alanna no Laço Gaúcho" />
+                <img src='\img\photos\first_card.png' alt="Alanna no Laço Gaúcho" />
                 <table>
                     <tbody>
                         <tr>
