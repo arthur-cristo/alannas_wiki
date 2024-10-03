@@ -9,22 +9,22 @@ const PhotoGallery = () => {
 
   useEffect(() => {
     const inData = [
-      { src: './assets/img/socio.png', title: 'Com o sócio' },
-      { src: './assets/img/alannao.png', title: 'Alannão' },
-      { src: './assets/img/aniversario_18.png', title: '18 anos!' },
-      { src: './assets/img/aniversario_de_dudu.png', title: 'Aniversário de Dudu' },
-      { src: './assets/img/batom.png', title: 'Passando batom' },
-      { src: './assets/img/beijo_epico.png', title: 'Beijo épico' },
-      { src: './assets/img/cadu_chupadu.png', title: 'Chupadinho!' },
-      { src: './assets/img/emo.png', title: 'Emo?' },
-      { src: './assets/img/foto_no_colegio.png', title: 'Cólegio' },
-      { src: './assets/img/gang_trans.png', title: 'Gang Trans' },
-      { src: './assets/img/laco_gaucho.png', title: 'Laço Gaúcho' },
-      { src: './assets/img/love.png', title: 'Love' },
-      { src: './assets/img/noise.png', title: 'Eu i Ela' },
-      { src: './assets/img/pensando.png', title: 'Pensando...' },
-      { src: './assets/img/show_do_jao.png', title: 'Show do Jão' },
-      { src: './assets/img/show_do_jao_com_amigas.png', title: 'Show do Jão acompanhada' },
+      { src: './alannas_wiki/assets/img/socio.png', title: 'Com o sócio' },
+      { src: './alannas_wiki/assets/img/alannao.png', title: 'Alannão' },
+      { src: './alannas_wiki/assets/img/aniversario_18.png', title: '18 anos!' },
+      { src: './alannas_wiki/assets/img/aniversario_de_dudu.png', title: 'Aniversário de Dudu' },
+      { src: './alannas_wiki/assets/img/batom.png', title: 'Passando batom' },
+      { src: './alannas_wiki/assets/img/beijo_epico.png', title: 'Beijo épico' },
+      { src: './alannas_wiki/assets/img/cadu_chupadu.png', title: 'Chupadinho!' },
+      { src: './alannas_wiki/assets/img/emo.png', title: 'Emo?' },
+      { src: './alannas_wiki/assets/img/foto_no_colegio.png', title: 'Cólegio' },
+      { src: './alannas_wiki/assets/img/gang_trans.png', title: 'Gang Trans' },
+      { src: './alannas_wiki/assets/img/laco_gaucho.png', title: 'Laço Gaúcho' },
+      { src: './alannas_wiki/assets/img/love.png', title: 'Love' },
+      { src: './alannas_wiki/assets/img/noise.png', title: 'Eu i Ela' },
+      { src: './alannas_wiki/assets/img/pensando.png', title: 'Pensando...' },
+      { src: './alannas_wiki/assets/img/show_do_jao.png', title: 'Show do Jão' },
+      { src: './alannas_wiki/assets/img/show_do_jao_com_amigas.png', title: 'Show do Jão acompanhada' },
       { src: './assets/img/silly.png', title: 'Silly' }
     ];
 
