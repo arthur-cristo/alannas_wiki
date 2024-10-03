@@ -1,7 +1,7 @@
-import '../style/Carousel.css';
+import '../style/Gallery.css';
 import PropTypes from 'prop-types';
 
-const Carousel = ({ data }) => {
+const Gallery = ({ data }) => {
 
     return (
         <div className='gallery'>
@@ -15,11 +15,11 @@ const Carousel = ({ data }) => {
     )
 }
 
-Carousel.propTypes = {
+Gallery.propTypes = {
     data: PropTypes.arrayOf(PropTypes.shape({
         src: PropTypes.string.isRequired,
         title: PropTypes.string.isRequired
     })).isRequired
 };
 
-export default Carousel
+export default Gallery
