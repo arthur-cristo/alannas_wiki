@@ -6,11 +6,12 @@
 
 .container {
     margin-inline: 1em;
-    margin-top: 10em;
+    margin-top: 6.5em;
     margin-bottom: 4em;
     display: flex;
     gap: 8em;
     justify-content: center;
+    padding: 1em;
 }
 
 .container p {
@@ -84,7 +85,6 @@ td {
 
 @media(max-width: 768px) {
     .container {
-        margin-top: 9em;
         flex-direction: column;
         gap: 3em;
         padding: 1em;
