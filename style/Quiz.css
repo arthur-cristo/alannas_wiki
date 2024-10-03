@@ -1,0 +1,46 @@
+.quiz-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1em;
+    padding: 3em;
+}
+
+.quiz-container h2 {
+    margin-top: 1em;
+}
+
+.secret {
+    display: block;
+}
+
+.quiz-container input {
+    padding: 1em 2em;
+    border: none;
+    border-radius: 2em;
+    background: #f2f2f2;
+    color: rgba(108,26,204,1);
+}
+
+.secret p {
+    text-align: justify;
+}
+
+.compass {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5em;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .compass {
+        flex-direction: column;
+        gap: 3em;
+    }
+}

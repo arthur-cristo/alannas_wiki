@@ -13,6 +13,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  max-width: 100vw;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -36,11 +40,8 @@ h1 {
   background: linear-gradient(0deg, rgba(108,26,204,1) 0%, rgba(36,36,36,1) 100%);
 }
 
-.home, .photos {
+.home, .photos, .quiz {
   padding: 0;
   margin: 0;
-}
-
-.home {
   scroll-margin-top: 8em;
 }
