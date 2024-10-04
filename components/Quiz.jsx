@@ -40,7 +40,7 @@ const Quiz = () => {
                         width="auto"
                         height="200px"
                         src="https://www.youtube.com/embed/j56dEcq7ryo?start=0"
-                        title="The Neighbourhood - Compass"
+                        title="Compass - The Neighbourhood"
                         frameBorder="0"
                         allow="encrypted-media"
                         allowFullScreen
