@@ -1,0 +1,49 @@
+.dedication-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2em;
+    padding: 2em;
+    margin: 2em;
+    margin-bottom: 0;
+    padding-bottom: 1em;
+}
+
+.dedication-container p {
+    text-align: justify;
+}
+
+.dedication-container h3 {
+    text-align: right;
+    width: 100%;
+}
+
+.dedication-container hr {
+    width: 100%;
+}
+
+.song {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.song p {
+    text-align: center;
+}
+
+.music {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+@media (min-width: 768px) {
+    .music {
+        display: flex;
+        gap: 6em;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

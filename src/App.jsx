@@ -6,6 +6,7 @@ import PhotosGallery from '../components/PhotosGallery'
 import Quiz from '../components/Quiz'
 import DrawsGallery from '../components/DrawsGallery'
 import Orientation from 'react-native-orientation-locker';
+import Dedication from '../components/Dedication'
 
 import './App.css'
 
@@ -25,7 +26,7 @@ function App() {
   }, []);
 
   return (
-    <div className='bg'>
+    <>
       <Header
         onHomeClick={() => scrollToSection(homeRef)}
         onPhotosClick={() => scrollToSection(photosRef)}
@@ -41,10 +42,13 @@ function App() {
       <div ref={quizRef} className='quiz'>
         <Quiz />
       </div>
+      <div className='dedication'>
+        <Dedication />
+      </div>
       <div ref={drawsRef} className='draws'>
         <DrawsGallery />
       </div>
-    </div>
+    </>
   )
 }
 
