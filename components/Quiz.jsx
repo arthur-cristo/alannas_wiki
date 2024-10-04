@@ -39,7 +39,7 @@ const Quiz = () => {
                     <iframe
                         width="auto"
                         height="200px"
-                        src="https://www.youtube.com/embed/j56dEcq7ryo?autoplay=1"
+                        src="https://www.youtube.com/embed/j56dEcq7ryo?autoplay=1&start=0"
                         title="The Neighbourhood - Compass"
                         frameBorder="0"
                         allow="autoplay; encrypted-media"
