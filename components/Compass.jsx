@@ -1,76 +1,80 @@
-import { useState, useEffect } from 'react';
-import { FaArrowDown } from "react-icons/fa";
-import '../style/Compass.css';
+import { useState, useEffect } from "react";
+import { useGeolocated } from "react-geolocated";
+import { FaArrowUp } from "react-icons/fa";
+import "../style/Compass.css";
 
-const Compass = () => {
+export default function MinimalCompass() {
+  const {
+    coords,
+    isGeolocationAvailable,
+    isGeolocationEnabled
+  } = useGeolocated({
+    positionOptions: {
+      enableHighAccuracy: false
+    },
+    userDecisionTimeout: 5000
+  });
 
-    const [currentPosition, setCurrentPosition] = useState({ latitude: null, longitude: null });
-    const [rotation, setRotation] = useState(0);
-    const [targetLat, targetLon] = [-12.8898846, -38.319197]
+  const [pointDegree, setPointDegree] = useState(0);
+  const [compassRotation, setCompassRotation] = useState(0);
 
-    // get the current location
-    useEffect(() => {
-        const geoSuccess = (position) => {
-            const { latitude, longitude } = position.coords;
-            setCurrentPosition({ latitude, longitude });
-        };
+  // Calculate the degree to the point
+  const calcDegreeToPoint = (latitude, longitude) => {
+    const target = {
+      lat: -12.8936592,
+      lng: -38.319197
+    };
+    const rad = Math.PI / 180.0;
+    const phiK = target.lat * rad;
+    const lambdaK = target.lng * rad;
+    const phi = latitude * rad;
+    const lambda = longitude * rad;
 
-        const geoError = (error) => {
-            console.error("Error getting location:", error);
-        };
+    const psi =
+      (180.0 / Math.PI) *
+      Math.atan2(
+        Math.sin(lambdaK - lambda),
+        Math.cos(phi) * Math.tan(phiK) - Math.sin(phi) * Math.cos(lambdaK - lambda)
+      );
+    return Math.round(psi);
+  };
 
-        navigator.geolocation ?
-            navigator.geolocation.getCurrentPosition(geoSuccess, geoError) :
-            console.error("Geolocation is not supported by this browser.");
-    }, []);
-
-    // Function to calculate the azimuth between the current position and the target
-    const calculateAzimuth = (lat1, lon1, lat2, lon2) => {
-        const rad = Math.PI / 180;
-
-        const dLon = (lon2 - lon1) * rad;
-        const y = Math.sin(dLon) * Math.cos(lat2 * rad);
-        const x = Math.cos(lat1 * rad) * Math.sin(lat2 * rad) - Math.sin(lat1 * rad) * Math.cos(lat2 * rad) * Math.cos(dLon);
-
-        const azimuth = Math.atan2(y, x) * (180 / Math.PI);
-        return (azimuth + 360) % 360;
+  // Start the compass when rendered
+  useEffect(() => {
+    const locationHandler = (coords) => {
+      const { latitude, longitude } = coords;
+      const resP = calcDegreeToPoint(latitude, longitude);
+      setPointDegree(resP < 0 ? resP + 360 : resP);
     };
 
-    // Function to update the heading (device direction)
-    useEffect(() => {
-        const handleOrientation = (event) => {
-            let compassHeading = event.alpha;
-          
-            if (typeof compassHeading !== 'number') {
-              console.error("Device orientation not available or supported.");
-              return;
-            }
-          
-            if (currentPosition.latitude !== null && currentPosition.longitude !== null) {
-              const azimuth = calculateAzimuth(currentPosition.latitude, currentPosition.longitude, targetLat, targetLon);
-              const newRotation = (azimuth - compassHeading + 360) % 360;
-              setRotation(newRotation);
-            }
-        };
+    if (coords) {
+      locationHandler(coords);
+    }
 
-        if (window.DeviceOrientationEvent) {
-            window.addEventListener('deviceorientation', handleOrientation);
-        } else {
-            console.error("Device orientation is not supported by this browser.");
-        }
+    const startCompass = async () => {
+      if (window.DeviceOrientationEvent) {
+        window.addEventListener("deviceorientation", handler, true);
+      } else {
+        console.error("Device orientation is not supported by this browser.");
+      }
+    };
 
-        return () => window.removeEventListener('deviceorientation', handleOrientation);
-    }, [currentPosition, targetLat, targetLon]);
+    const handler = (e) => {
+      const compass = e.webkitCompassHeading || Math.abs(e.alpha - 360);
+      setCompassRotation(compass);
+    };
 
-    return (
-        <div id="compass-container">
-            <FaArrowDown
-                id="compass"
-                alt="Compass"
-                style={{ transform: `rotate(${rotation}deg)` }}
-            />
-        </div>
-    );
-};
+    startCompass();
 
-export default Compass;
+    return () => window.removeEventListener("deviceorientation", handler);
+  }, [coords]);
+
+  return (
+    <div className="minimal-compass">
+      <FaArrowUp
+        style={{ transform: `rotate(${-compassRotation}deg)` }}
+        className="compass-icon"
+      />
+    </div>
+  );
+}
