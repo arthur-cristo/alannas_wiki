@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { IoIosCompass } from "react-icons/io";
+import { FaArrowDown } from "react-icons/fa";
 import '../style/Compass.css';
 
 const Compass = () => {
@@ -60,7 +60,7 @@ const Compass = () => {
 
     return (
         <div id="compass-container">
-            <IoIosCompass
+            <FaArrowDown
                 id="compass"
                 alt="Compass"
                 style={{ transform: `rotate(${rotation + 135}deg)` }}
