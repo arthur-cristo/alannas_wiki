@@ -39,13 +39,17 @@ const Compass = () => {
     // Function to update the heading (device direction)
     useEffect(() => {
         const handleOrientation = (event) => {
-            const compassHeading = event.alpha;
-
-            console.log(currentPosition)
+            let compassHeading = event.alpha;
+          
+            if (typeof compassHeading !== 'number') {
+              console.error("Device orientation not available or supported.");
+              return;
+            }
+          
             if (currentPosition.latitude !== null && currentPosition.longitude !== null) {
-                const azimuth = calculateAzimuth(currentPosition.latitude, currentPosition.longitude, targetLat, targetLon);
-                const newRotation = (azimuth - compassHeading + 360) % 360;
-                setRotation(newRotation);
+              const azimuth = calculateAzimuth(currentPosition.latitude, currentPosition.longitude, targetLat, targetLon);
+              const newRotation = (azimuth - compassHeading + 360) % 360;
+              setRotation(newRotation);
             }
         };
 
@@ -63,7 +67,7 @@ const Compass = () => {
             <FaArrowDown
                 id="compass"
                 alt="Compass"
-                style={{ transform: `rotate(${rotation + 135}deg)` }}
+                style={{ transform: `rotate(${rotation}deg)` }}
             />
         </div>
     );
