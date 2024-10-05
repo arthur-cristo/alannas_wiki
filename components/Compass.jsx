@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useGeolocated } from "react-geolocated";
-import { FaArrowUp } from "react-icons/fa";
+import { FaArrowLeft } from "react-icons/fa";
 import "../style/Compass.css";
 
 export default function MinimalCompass() {
@@ -71,7 +71,7 @@ export default function MinimalCompass() {
 
   return (
     <div className="minimal-compass">
-      <FaArrowUp
+      <FaArrowLeft
         style={{ transform: `rotate(${-compassRotation}deg)` }}
         className="compass-icon"
       />

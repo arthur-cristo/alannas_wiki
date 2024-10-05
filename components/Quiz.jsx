@@ -32,7 +32,7 @@ const Quiz = () => {
                 <br /><p>Caso você seja a minha princesa, eu queria dizer que te amo muitooo!</p><br />
                 <p>Você é muito especial para mim, a minha pessoa preferida, queria poder estar sempre com você.</p><br />
                 <p>Você é o meu raio de luz, não me imaginar sem você.</p><br />
-                <p>Vou deixar essa bússola que provavelmente vai apontar para onde eu tô (minha casakk)</p><br />
+                <p>Vou deixar essa seta que provavelmente vai apontar para onde eu tô (minha casakk)</p><br />
                 <p>Te amo! Beijos!</p>
                 <div className="compass">
                     <Compass />
