@@ -5,7 +5,6 @@
     flex-direction: column;
     gap: 2em;
     padding: 2em;
-    margin: 2em;
     margin-bottom: 0;
     padding-bottom: 1em;
 }
@@ -36,13 +35,14 @@
 .music {
     display: flex;
     flex-direction: column;
-    gap: 2em;
+    gap: 3em;
+    margin-bottom: 1em;
 }
 
 @media (min-width: 768px) {
     .music {
         display: flex;
-        gap: 6em;
+        gap: 2em;
         justify-content: space-between;
         align-items: center;
     }

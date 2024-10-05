@@ -5,12 +5,16 @@
     gap: 1em;
     padding: 1em;
     margin-top: 10em;
-    margin-bottom: 5em;
+    margin-bottom: 9em;
 }
 
 .text {
     width: 20%;
     margin-left: 30em;
+}
+
+.text p, .text-mobile p {
+    text-align: justify;
 }
 
 .text-mobile {
@@ -21,7 +25,8 @@
         flex-direction: column;
         gap: 4em;
         padding: 2em;
-        margin: 2em;
+        margin: 0;
+        margin-bottom: 1em;
     }
 
     .text-mobile {

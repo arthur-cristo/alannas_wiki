@@ -14,7 +14,8 @@ const DrawsGallery = () => {
         { src: '/img/draws/colagem.jpeg', title: 'colagem' },
         { src: '/img/draws/eu_denji.jpeg', title: 'eu_denji' },
         { src: '/img/draws/eu_moletom.jpeg', title: 'eu_moletom' },
-        { src: '/img/draws/uranity.jpg', title: 'uranity' }
+        { src: '/img/draws/uranity.jpg', title: 'uranity' },
+        { src: '/img/draws/fofo.jpeg', title: 'fofo' },
     ];
 
     return (

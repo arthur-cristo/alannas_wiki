@@ -34,6 +34,16 @@ const PhotoGallery = () => {
       { src: '/img/photos/aniversario_17.png', title: 'Aniversário de 17' },
       { src: '/img/photos/cosplay_combinando.png', title: 'Cosplay combinando' },
       { src: '/img/photos/com_a_familia.jpeg', title: 'Com a família' },
+      { src: '/img/photos/academia.png', title: 'Ta pago' },
+      { src: '/img/photos/colegio.png', title: 'A gente na escola' },
+      { src: '/img/photos/no_colegio.png', title: 'A gente na escola' },
+      { src: '/img/photos/dominos.png', title: 'Na Domino´s' },
+      { src: '/img/photos/furry.png', title: '???' },
+      { src: '/img/photos/linda.png', title: 'Você sendo linda' },
+      { src: '/img/photos/sendo_linda.png', title: 'Você sendo linda' },
+      { src: '/img/photos/sao_joao.png', title: 'Você junina' },
+      { src: '/img/photos/passeio.png', title: 'Nós em Cachoeira' },
+      { src: '/img/photos/no_clarao.png', title: 'flashbang.png' },
       { src: '/img/photos/com_sua_mae.png', title: 'Com sua mãe' }
     ];
 
@@ -53,14 +63,15 @@ const PhotoGallery = () => {
     <div className="photosCarousel">
       <div className="text-mobile">
         <h1>Fotos</h1>
-        <p>Neste conjunto de fotos tiradas entre o ano de 2022 à 2024 (com exceção de uma) é perceptível sua beleza estonteante e fofura.</p>
+        <p>Neste conjunto de fotos é perceptível sua beleza estonteante e fofura. Ao todo são 36 fotos, sendo 5 delas exibidas a cada 10 segundos de forma aleatria, espero que você consiga ver todas. 
+        </p>
       </div>
       <Gallery className="carousel"
         data={data}
       />
       <div className="text">
         <h1>Fotos</h1>
-        <p>Neste conjunto de fotos tiradas entre o ano de 2022 à 2024 (com exceção de uma) é perceptível sua beleza estonteante e fofura.</p>
+        <p>Neste conjunto de fotos é perceptível sua beleza estonteante e fofura. Ao todo são 36 fotos, sendo 5 delas exibidas a cada 10 segundos de forma aleatria, espero que você consiga ver todas. </p>
       </div>
     </div>
   );
