@@ -30,8 +30,8 @@ const PhotoGallery = () => {
       { src: '/img/photos/date_cinema.png', title: 'Date no cinema' },
       { src: '/img/photos/date_shopping.png', title: 'Date no shopping' },
       { src: '/img/photos/role_shopping.png', title: 'Rolê no shopping' },
-      { src: '/img/photos/aniversario_16.png', title: 'Aniversário de 16' },
-      { src: '/img/photos/aniversario_17.png', title: 'Aniversário de 17' },
+      { src: '/img/photos/aniversario_16.png', title: 'Aniversário de 17' },
+      { src: '/img/photos/aniversario_17.png', title: 'Aniversário de 16' },
       { src: '/img/photos/cosplay_combinando.png', title: 'Cosplay combinando' },
       { src: '/img/photos/com_a_familia.jpeg', title: 'Com a família' },
       { src: '/img/photos/academia.png', title: 'Ta pago' },
@@ -63,7 +63,7 @@ const PhotoGallery = () => {
     <div className="photosCarousel">
       <div className="text-mobile">
         <h1>Fotos</h1>
-        <p>Neste conjunto de fotos é perceptível sua beleza estonteante e fofura. Ao todo são 36 fotos, sendo 5 delas exibidas a cada 10 segundos de forma aleatria, espero que você consiga ver todas. 
+        <p>Neste conjunto de fotos é perceptível sua beleza estonteante e fofura. Ao todo são 36 fotos, sendo 5 delas exibidas a cada 10 segundos de forma aleatória, espero que você consiga ver todas.
         </p>
       </div>
       <Gallery className="carousel"
@@ -71,7 +71,7 @@ const PhotoGallery = () => {
       />
       <div className="text">
         <h1>Fotos</h1>
-        <p>Neste conjunto de fotos é perceptível sua beleza estonteante e fofura. Ao todo são 36 fotos, sendo 5 delas exibidas a cada 10 segundos de forma aleatria, espero que você consiga ver todas. </p>
+        <p>Neste conjunto de fotos é perceptível sua beleza estonteante e fofura. Ao todo são 36 fotos, sendo 5 delas exibidas a cada 10 segundos de forma aleatória, espero que você consiga ver todas. </p>
       </div>
     </div>
   );
